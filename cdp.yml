@@ -1,6 +1,6 @@
 ---
  - name: show CDP parameters on ASW1
-   hosts: ASW1
+   hosts: DSW1
 
    tasks:
     - name: show CDP 
