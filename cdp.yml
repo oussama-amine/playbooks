@@ -1,0 +1,15 @@
+---
+ - name: show CDP parameters on ASW1
+   hosts: ASW1
+
+   tasks:
+    - name: show CDP 
+      ios_command:
+        commands:
+        - show cdp neighbors 
+      register: config
+
+    - name: save output
+      copy:
+        content: "{{ config.stdout | replace('\\n', '\n') }}"
+        dest: "cdp.txt"
