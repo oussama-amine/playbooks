@@ -12,4 +12,4 @@
     - name: save output
       copy:
         content: "{{ config.stdout | replace('\\n', '\n') }}"
-        dest: "/etc/ansible/playbooks/cdp.txt"
+        dest: "/etc/ansible/cdp.txt"
